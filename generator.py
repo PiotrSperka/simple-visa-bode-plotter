@@ -32,7 +32,7 @@ class Generator:
         self.awg.write('CHANnel1:BASE:WAVe SINe')
         self.awg.write('CHANnel1:BASE:PHASe 0')
         self.awg.write('CHANnel1:BASE:AMPLitude 1')
-        self.awg.write('CHANnel1:BASE:OFFSet 0')
+        # self.awg.write('CHANnel1:BASE:OFFSet 0')
         self.awg.write('CHANnel1:OUTPut 1')
         pass
 

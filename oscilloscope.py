@@ -188,6 +188,7 @@ class Oscilloscope:
         channel_voltages = np.array([float(processed_preamble.w.CH1_voltage)/self.VOLTAGE_FACTOR*1000, float(processed_preamble.w.CH2_voltage)/self.VOLTAGE_FACTOR*1000, float(processed_preamble.w.CH3_voltage)/self.VOLTAGE_FACTOR*1000, float(processed_preamble.w.CH4_voltage)/self.VOLTAGE_FACTOR*1000]) * np.array(probe_factors)
         changed_settings = False
 
+        # TODO: set sensitivity based on filtered value?
         for i in range(0, 4):
             if len(split_channels[i]) > 0:
                 if split_channels[i].min() < -125 or split_channels[i].max() > 125:
